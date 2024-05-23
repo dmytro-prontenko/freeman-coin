@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { motion } from "framer-motion";
+import * as Styled from "./Styles.styled.js";
+import data from "/public/video/white-noise.webm";
+import TextScroller from "./components/TextScroller/TextScroller.jsx";
+import img1 from "./assets/1.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <Styled.HeroVideo
+        autoPlay
+        muted
+        playsInline
+        loop
+        $webkit-playsinline
+        id="hero-video"
+      >
+        <source src={data} type="video/webm" />
+        Ваш браузер не поддерживает тег video.
+      </Styled.HeroVideo>
+      <motion.div initial={{ y: -500 }} animate={{ y: 0, delay: 300 }}>
+        <div className="solid">FMAN</div>
+      </motion.div>
+
+      <motion.div initial={{ x: 1000 }} animate={{ x: 100 }} exit={{ x: 0 }}>
+        <img src={img1} alt={"freeman"} />
+      </motion.div>
+      <div className="outline">FMAN</div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        FMAN is a degenerate gambler with anger issues on the Solana network.
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TextScroller text="$FMAN" />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
