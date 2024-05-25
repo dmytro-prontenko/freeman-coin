@@ -10,6 +10,8 @@ export const HeaderLangWrapper = styled.div`
 export const NavHeader = styled(motion.nav)`
   background-color: #000;
   border-bottom: #fff 1px solid;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -20,7 +22,7 @@ export const NavHeader = styled(motion.nav)`
 
 export const NavHeaderLink = styled.a`
   color: #fff;
-  font-family: var(--font-family), sans-serif;
+  font-family: "pershotravneva55-regular", sans-serif;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -44,20 +46,22 @@ export const NavHeaderLink = styled.a`
 `;
 
 export const FreemanLanguageButton = styled(motion.button)`
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px 10px;
+  margin: 0 32px;
+  font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 1em;
   color: #fff;
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 35px;
   border: 2px solid #fff;
   cursor: pointer;
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
     border-color 0.3s ease;
-
   &:hover {
     background-color: #fff;
     color: #000;

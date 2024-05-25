@@ -22,6 +22,33 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GhastlyPanic';
+  src: url('/fonts/GhastlyPanicCyr.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark-Squad';
+  src: url('/fonts/Mark-Squad.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DarkGraffiti-Regular';
+  src: url('/fonts/DarkGraffiti-Regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pershotravneva55-regular';
+  src: url('/fonts/pershotravneva55-regular.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
   --basic-white: #fcfbfb;

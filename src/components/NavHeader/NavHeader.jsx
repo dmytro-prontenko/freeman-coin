@@ -1,5 +1,6 @@
 import * as Styled from "./NavHeader.styled.js";
 import { useState } from "react";
+import about from "../About/About.jsx";
 
 const NavHeader = () => {
   const [lang, setLang] = useState("EN");
@@ -15,7 +16,7 @@ const NavHeader = () => {
         exit={{ y: 1000 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <Styled.NavHeaderLink>About</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#about"}>About</Styled.NavHeaderLink>
         <Styled.NavHeaderLink>Tokenomics</Styled.NavHeaderLink>
         <Styled.NavHeaderLink>Roadmap</Styled.NavHeaderLink>
         <Styled.NavHeaderLink>How to buy</Styled.NavHeaderLink>
@@ -24,6 +25,10 @@ const NavHeader = () => {
       </Styled.NavHeader>
       <Styled.HeaderLangWrapper>
         <Styled.FreemanLanguageButton
+          initial={{ x: 1000 }}
+          animate={{ x: 0 }}
+          exit={{ x: -1000 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           whileHover={{ scale: 1.1 }}
           onClick={changeLanguage}
         >

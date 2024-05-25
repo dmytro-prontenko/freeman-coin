@@ -1,10 +1,13 @@
-import tvGif from "/gif/tv.gif";
+import tvGif from "/gif/tv1.gif";
+import twitter from "/icon/twitter.png";
+import telegram from "/icon/telegram.png";
 import * as Styled from "./About.styled.js";
 import NavHeader from "../NavHeader/NavHeader.jsx";
+import { SocialImg } from "./About.styled.js";
 
 const About = () => {
   return (
-    <>
+    <Styled.Headr id={"#about"}>
       <NavHeader />
       <Styled.ContainerHeroWrapper>
         <Styled.AboutTitle
@@ -35,24 +38,22 @@ const About = () => {
             animate={{ x: 0 }}
             exit={{ x: 1000 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            whileHover={{ scale: 1.1 }}
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Твиттер
+            <Styled.SocialImg src={twitter} alt="Twitter icon" />
           </Styled.TwitterButton>
           <Styled.TelegramButton
             initial={{ x: 1000 }}
             animate={{ x: 0 }}
             exit={{ x: -1000 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            whileHover={{ scale: 1.1 }}
             href="https://telegram.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Телеграм
+            <Styled.SocialImg src={telegram} alt="Twitter icon" />
           </Styled.TelegramButton>
         </Styled.ContainerHeroSocialWrapper>
         <Styled.FreemanButton
@@ -71,7 +72,7 @@ const About = () => {
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 2, ease: "easeOut" }}
       />
-    </>
+    </Styled.Headr>
   );
 };
 
