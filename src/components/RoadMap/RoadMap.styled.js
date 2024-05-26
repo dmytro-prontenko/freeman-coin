@@ -21,8 +21,10 @@ export const RoadMapTitle = styled(motion.h2)`
   font-size: 48px;
   text-transform: uppercase;
   letter-spacing: 4px;
-
-  text-decoration: underline;
+  margin-bottom: 24px;
+  border-radius: 34px;
+  border: 4px solid #fff;
+  background: #000;
   @media screen and (min-width: 768px) {
     font-size: 64px;
     margin: 0 auto;
@@ -35,6 +37,7 @@ export const RoadMapSubTitle = styled(motion.h3)`
   font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 16px;
   @media screen and (min-width: 768px) {
     font-size: 48px;
   }
@@ -42,6 +45,7 @@ export const RoadMapSubTitle = styled(motion.h3)`
 
 export const RoadMapList = styled(motion.ul)`
   padding: 0;
+  margin-bottom: 24px;
 `;
 
 export const RoadMapItem = styled(motion.li)`

@@ -17,7 +17,10 @@ export const TokenomicsTitle = styled(motion.h2)`
   letter-spacing: 4px;
   margin: 20px 0;
   text-align: center;
-  text-decoration: underline;
+  //text-decoration: underline;
+  border-radius: 34px;
+  border: 4px solid #fff;
+  background: #000;
   @media screen and (min-width: 768px) {
     font-size: 64px;
   }
@@ -79,5 +82,38 @@ export const ToknomicsKey = styled(motion.span)`
   @media screen and (min-width: 768px) {
     max-width: 80%;
     font-size: 24px;
+  }
+`;
+
+export const TokenomicsButton = styled(motion.a)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  padding: 10px 20px 5px;
+  font-size: 1.2em;
+  font-family: "pershotravneva55-regular", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+  }
+
+  &:active {
+    background-color: #444;
+    color: #fff;
+    border-color: #fff;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
   }
 `;

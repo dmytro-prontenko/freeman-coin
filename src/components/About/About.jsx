@@ -1,9 +1,8 @@
-import tvGif from "/gif/tv1.gif";
+import tvGif from "/gif/tv2.gif";
 import twitter from "/icon/twitter.png";
 import telegram from "/icon/telegram.png";
 import * as Styled from "./About.styled.js";
 import NavHeader from "../NavHeader/NavHeader.jsx";
-import { SocialImg } from "./About.styled.js";
 
 const About = () => {
   return (
@@ -53,7 +52,9 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Styled.SocialImg src={telegram} alt="Twitter icon" />
+            <Styled.SocialImgTG>
+              <Styled.SocialImg src={telegram} alt="Twitter icon" />
+            </Styled.SocialImgTG>
           </Styled.TelegramButton>
         </Styled.ContainerHeroSocialWrapper>
         <Styled.FreemanButton

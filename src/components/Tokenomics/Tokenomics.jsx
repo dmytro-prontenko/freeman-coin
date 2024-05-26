@@ -11,7 +11,6 @@ const Tokenomics = () => {
       [index]: !prevState[index],
     }));
 
-    // Возвращаем обратно через 2 секунды
     setTimeout(() => {
       setFlipped((prevState) => ({
         ...prevState,
@@ -63,14 +62,14 @@ const Tokenomics = () => {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         mollit anim id est laborum.
       </Styled.ToknomicsDescription>
-      <Styled.ToknomicsKey
-        onClick={() => handleClick(1)}
-        ref={(el) => (textRefs.current[1] = el)}
-        animate={{ rotateY: flipped[1] ? 180 : 0 }}
-        transition={{ duration: 0.6 }}
+      <Styled.TokenomicsButton
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        exit={{ x: 1000 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
-        {flipped[1] ? "Скопировано!" : "tonviewer.com"}
-      </Styled.ToknomicsKey>
+        tonviewer.com
+      </Styled.TokenomicsButton>
     </Styled.TokenomicsSection>
   );
 };

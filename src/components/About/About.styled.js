@@ -27,7 +27,6 @@ export const AboutTitle = styled(motion.h1)`
   font-size: 64px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 20px 0;
   text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 100px;
@@ -39,7 +38,6 @@ export const AboutDescription = styled(motion.p)`
   padding: 20px;
   font-size: 16px;
   line-height: 1.2;
-  margin: 20px 0;
   font-family: "LongToday", sans-serif;
   text-align: justify;
 
@@ -91,9 +89,8 @@ export const FreemanButton = styled(motion.a)`
 
 const SocialButton = styled(motion.a)`
   display: inline-block;
-  margin: 0 10px;
-  width: 64px;
-  height: 64px;
+  width: 58px;
+  height: 58px;
   text-decoration: none;
   background-color: #fff;
   border-radius: 5px;
@@ -113,4 +110,9 @@ export const SocialImg = styled(motion.img)`
     ${SocialButton}:focus & {
     transform: scale(1.2) rotate(360deg);
   }
+`;
+
+export const SocialImgTG = styled(motion.div)`
+  border-radius: 5px;
+  border: 2px solid #0f0f0f;
 `;
