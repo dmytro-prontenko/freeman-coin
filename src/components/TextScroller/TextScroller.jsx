@@ -1,6 +1,6 @@
 import * as Styled from "./TextScroller.styled.js";
-import misterFreeman from "/icon/moneta.png";
-import baks from "/icon/baks.jpg";
+import misterFreeman from "/icon/moneta.webp";
+import baks from "/icon/baks.webp";
 const TextScroller = ({ text }) => {
   return (
     <Styled.StyledTextScroller>

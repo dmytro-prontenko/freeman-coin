@@ -1,5 +1,5 @@
 import * as Styled from "./Earn.styled.js";
-import misterFreeman from "/icon/moneta.png";
+import misterFreeman from "/icon/moneta.webp";
 import ton from "/icon/ton.png";
 import { useTranslation } from "react-i18next";
 const Earn = () => {
