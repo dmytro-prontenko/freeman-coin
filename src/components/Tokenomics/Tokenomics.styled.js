@@ -6,6 +6,22 @@ export const TokenomicsWrapper = styled.section`
   padding: 64px 0 64px;
   background-image: url("/tok_bg.webp");
   background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(180deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 10%),
+      linear-gradient(360deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 5%);
+  }
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
 `;
 
 export const TokenomicsSection = styled.div`
@@ -13,6 +29,8 @@ export const TokenomicsSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
 `;
 
 export const TokenomicsTitle = styled(motion.h2)`
@@ -22,13 +40,19 @@ export const TokenomicsTitle = styled(motion.h2)`
   font-size: 48px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 20px 0;
+  margin: 20px auto 20px;
   text-align: center;
   border-radius: 34px;
   border: 4px solid #fff;
   background: #000;
+
   @media screen and (min-width: 768px) {
     font-size: 64px;
+    margin-bottom: 36px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 120px;
+    margin-bottom: 48px;
   }
 `;
 
@@ -43,6 +67,9 @@ export const TokenomicsSubTitle = styled(motion.h3)`
   @media screen and (min-width: 768px) {
     font-size: 48px;
   }
+  @media screen and (min-width: 1279px) {
+    font-size: 72px;
+  }
 `;
 
 export const ToknomicsDescription = styled(motion.p)`
@@ -56,6 +83,9 @@ export const ToknomicsDescription = styled(motion.p)`
   @media screen and (min-width: 768px) {
     max-width: 85%;
     font-size: 24px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 
@@ -85,8 +115,10 @@ export const ToknomicsKey = styled(motion.span)`
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 80%;
-    font-size: 24px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 48px;
   }
 `;
 
@@ -119,12 +151,15 @@ export const TokenomicsButton = styled(motion.a)`
     border-color: #fff;
   }
   @media screen and (min-width: 768px) {
-    font-size: 32px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 48px;
   }
 `;
 
 export const TakenomicsImg = styled(motion.img)`
-  width: 95vw;
+  max-width: 1280px;
   height: auto;
   filter: blur(8px);
   margin: 24px auto;

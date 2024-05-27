@@ -6,6 +6,22 @@ export const EarnWrapper = styled.section`
   padding: 64px 0 64px;
   background-image: url("/earn_bg.webp");
   background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(180deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 10%),
+      linear-gradient(360deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 5%);
+  }
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
 `;
 
 export const EarnSection = styled.div`
@@ -14,17 +30,17 @@ export const EarnSection = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
+  max-width: 1280px;
   @media screen and (min-width: 768px) {
     align-items: start;
-    max-width: 80%;
   }
 `;
 
 export const EarnTitle = styled(motion.h2)`
   color: #fff;
   padding: 20px;
-  width: 98%;
+  width: 95%;
+  margin: 0 auto;
   font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 48px;
   text-transform: uppercase;
@@ -36,36 +52,51 @@ export const EarnTitle = styled(motion.h2)`
   border-radius: 34px;
   border: 4px solid #fff;
   background: #000;
+
   @media screen and (min-width: 768px) {
     font-size: 64px;
-    margin: 0 auto;
+    margin-bottom: 36px;
+    gap: 16px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 120px;
+    margin-bottom: 48px;
+    gap: 64px;
   }
 `;
 
 export const EarnSubTitle = styled(motion.h3)`
   color: #fff;
+  padding: 20px;
   font-family: "LongToday", sans-serif;
-  font-size: 34px;
+  font-size: 36px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0 auto 24px;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 0 auto;
   @media screen and (min-width: 768px) {
     font-size: 48px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 72px;
   }
 `;
 
 export const EarnDescription = styled(motion.p)`
   color: #fff;
+  padding: 20px;
   font-size: 16px;
   line-height: 1.2;
-  margin: 20px 0;
   font-family: "LongToday", sans-serif;
   text-align: justify;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
     max-width: 85%;
     font-size: 24px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 
@@ -94,26 +125,27 @@ export const EarnImage = styled.img`
 `;
 
 export const EarnList = styled.ol`
-  list-style: decimal;
-  margin-bottom: 32px;
-  width: 85%;
-  padding-left: 24px;
+  max-width: 90%;
+  @media screen and (min-width: 768px) {
+    padding-left: 60px;
+  }
+  @media screen and (min-width: 1279px) {
+    padding-left: 100px;
+  }
 `;
 
 export const EarnItem = styled.li`
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-size: 18px;
-  line-height: 1.2;
-  padding: 8px;
-  font-family: "LongToday", sans-serif;
-  text-align: justify;
+  justify-content: start;
+  padding: 12px 8px;
+  font-size: 16px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
     font-size: 24px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 
@@ -121,31 +153,35 @@ export const EarnFreandsText = styled(motion.p)`
   color: #fff;
   font-size: 16px;
   line-height: 1.2;
-  margin: 20px 0;
+  margin: 20px auto;
   font-family: "LongToday", sans-serif;
   text-align: center;
-
+  padding: 20px;
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
-    max-width: 80%;
+    max-width: 85%;
     font-size: 24px;
-    margin: 0 auto;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 
 export const EarnFreandsTextB = styled(motion.p)`
   color: #fff;
-  font-size: 32px;
+  padding: 20px;
+  font-size: 16px;
   line-height: 1.2;
-  margin: 20px 0;
   font-family: "LongToday", sans-serif;
   text-align: center;
+  margin: 0 auto;
   font-weight: bold;
+
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
     max-width: 85%;
-    font-size: 48px;
-    margin: 0 auto;
+    font-size: 24px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 

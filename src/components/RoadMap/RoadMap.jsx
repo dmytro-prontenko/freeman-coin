@@ -27,7 +27,7 @@ const RoadMap = () => {
           variants={listVariants}
         >
           {data1.map((item, index) => (
-            <RoadMapItem key={index} delay={index * 0.5} text={item.text} />
+            <RoadMapItem key={index} delay={index * 0.2} text={item.text} />
           ))}
         </Styles.RoadMapList>
         <Styles.RoadMapSubTitle>Q4 - Start Project</Styles.RoadMapSubTitle>
@@ -37,7 +37,7 @@ const RoadMap = () => {
           variants={listVariants}
         >
           {data2.map((item, index) => (
-            <RoadMapItem key={index} delay={index * 0.5} text={item.text} />
+            <RoadMapItem key={index} delay={index * 0.2} text={item.text} />
           ))}
         </Styles.RoadMapList>
       </Styles.RoadMapSection>

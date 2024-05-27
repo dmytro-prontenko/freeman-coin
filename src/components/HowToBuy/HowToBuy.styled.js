@@ -7,7 +7,8 @@ export const HowToByWrapper = styled.section`
   background-image: url("/how_to_buy_bg.webp");
   background-size: cover;
   position: relative;
-  &::before {
+
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -19,9 +20,20 @@ export const HowToByWrapper = styled.section`
     background-repeat: no-repeat;
     pointer-events: none;
   }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(180deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 10%),
+      linear-gradient(360deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 5%);
+  }
   & > * {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 `;
 
@@ -30,11 +42,10 @@ export const HowToBySection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  max-width: 1280px;
   margin: 0 auto;
   @media screen and (min-width: 768px) {
     align-items: start;
-    max-width: 80%;
   }
 `;
 
@@ -46,28 +57,35 @@ export const HowToByTitle = styled(motion.h2)`
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
-
+  margin: 20px auto 20px;
   border-radius: 34px;
   border: 4px solid #fff;
   background: #000;
   @media screen and (min-width: 768px) {
     font-size: 64px;
-    margin: 0 auto;
+    margin-bottom: 36px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 120px;
+    margin-bottom: 48px;
   }
 `;
 
 export const HowToByDescription = styled(motion.p)`
   color: #fff;
+  padding: 20px;
   font-size: 16px;
   line-height: 1.2;
-  margin: 20px 0;
   font-family: "LongToday", sans-serif;
   text-align: justify;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
-    max-width: 80%;
+    max-width: 85%;
     font-size: 24px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
   }
 `;
 
@@ -84,6 +102,12 @@ export const AppContainer = styled.div`
   border: 2px solid #fff;
   border-radius: 35px;
   width: 98%;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 72px;
+  }
 `;
 
 export const TimerContainer = styled.div`
@@ -108,7 +132,7 @@ export const TimerElement = styled.div`
 `;
 
 export const TimerLabel = styled.span`
-  font-size: 1rem;
+  font-size: 16px;
 `;
 export const TGCommunityContainer = styled.div`
   display: flex;
@@ -117,7 +141,10 @@ export const TGCommunityContainer = styled.div`
   width: 100%;
   gap: 6px;
   @media screen and (min-width: 768px) {
-    margin: 0 auto;
+    gap: 32px;
+  }
+  @media screen and (min-width: 1279px) {
+    gap: 64px;
   }
 `;
 
@@ -143,6 +170,14 @@ export const TGCommunityButton = styled(motion.a)`
   border: 2px solid #fff;
   cursor: pointer;
   perspective: 1000px;
+  @media screen and (min-width: 768px) {
+    height: 56px;
+    width: 250px;
+  }
+  @media screen and (min-width: 1279px) {
+    height: 72px;
+    width: 300px;
+  }
 `;
 
 export const TGCommunitySocialImg = styled(motion.img)`
@@ -172,6 +207,13 @@ export const ButtonText = styled.span`
   font-size: 22px;
   transform: rotateX(0deg);
   transition: transform 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 36px;
+  }
 
   ${TGCommunityButton}:hover & {
     transform: rotateX(180deg);

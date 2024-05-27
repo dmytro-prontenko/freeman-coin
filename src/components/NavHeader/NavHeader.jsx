@@ -14,7 +14,7 @@ const NavHeader = () => {
     console.log(lang);
   };
   return (
-    <>
+    <Styled.HeaderHiWrapper>
       <Styled.NavHeader
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
@@ -44,7 +44,7 @@ const NavHeader = () => {
           RU/EN
         </Styled.FreemanLanguageButton>
       </Styled.HeaderLangWrapper>
-    </>
+    </Styled.HeaderHiWrapper>
   );
 };
 

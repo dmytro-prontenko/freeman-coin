@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+export const HeaderHiWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto 20px;
+`;
+
 export const HeaderLangWrapper = styled.div`
   display: flex;
   justify-content: end;
@@ -17,13 +25,12 @@ export const NavHeader = styled(motion.nav)`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 `;
 
 export const NavHeaderLink = styled.a`
   color: #fff;
   font-family: "pershotravneva55-regular", sans-serif;
-  font-size: 1em;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
@@ -43,6 +50,12 @@ export const NavHeaderLink = styled.a`
     color: var(--basic-yellow);
     border-bottom: 2px solid var(--basic-yellow);
   }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 24px;
+  }
 `;
 
 export const FreemanLanguageButton = styled(motion.button)`
@@ -52,7 +65,7 @@ export const FreemanLanguageButton = styled(motion.button)`
   padding: 15px 20px 10px;
   margin: 0 32px;
   font-family: "DarkGraffiti-Regular", sans-serif;
-  font-size: 1em;
+  font-size: 14px;
   color: #fff;
   background-color: #000;
   border-radius: 35px;
@@ -66,5 +79,11 @@ export const FreemanLanguageButton = styled(motion.button)`
     background-color: #fff;
     color: #000;
     border-color: #000;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 24px;
   }
 `;
