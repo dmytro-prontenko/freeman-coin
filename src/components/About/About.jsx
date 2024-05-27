@@ -3,8 +3,10 @@ import twitter from "/icon/twitter.png";
 import telegram from "/icon/telegram.png";
 import * as Styled from "./About.styled.js";
 import NavHeader from "../NavHeader/NavHeader.jsx";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <Styled.Headr id={"#about"}>
       <NavHeader />
@@ -23,13 +25,7 @@ const About = () => {
           exit={{ x: -1000 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          {t("about_desc")}
         </Styled.AboutDescription>
         <Styled.ContainerHeroSocialWrapper>
           <Styled.TwitterButton

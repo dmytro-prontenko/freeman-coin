@@ -1,11 +1,16 @@
 import * as Styled from "./NavHeader.styled.js";
-import { useState } from "react";
-import about from "../About/About.jsx";
+import { useEffect, useState } from "react";
+import i18next from "i18next";
 
 const NavHeader = () => {
-  const [lang, setLang] = useState("EN");
+  const [lang, setLang] = useState(i18next.language);
+
+  useEffect(() => {
+    void i18next.changeLanguage(lang);
+  }, [lang]);
+
   const changeLanguage = () => {
-    setLang(lang === "EN" ? "RU" : "EN");
+    setLang(lang === "GB" ? "RU" : "GB");
     console.log(lang);
   };
   return (
@@ -17,11 +22,15 @@ const NavHeader = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <Styled.NavHeaderLink href={"#about"}>About</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink>Tokenomics</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink>Roadmap</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink>How to buy</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink>Earn</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink>Socials</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#tokenomics"}>
+          Tokenomics
+        </Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#road_map"}>Roadmap</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#how_to_buy"}>
+          How to buy
+        </Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#earn"}>Earn</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#join"}>Socials</Styled.NavHeaderLink>
       </Styled.NavHeader>
       <Styled.HeaderLangWrapper>
         <Styled.FreemanLanguageButton

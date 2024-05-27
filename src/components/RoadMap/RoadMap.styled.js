@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const RoadMapSection = styled.section`
+export const RoadMapWrapper = styled.section`
+  width: 100%;
+  padding: 64px 0 64px;
+  background-image: url("/road_bg.webp");
+  background-size: cover;
+`;
+
+export const RoadMapSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,13 +28,12 @@ export const RoadMapTitle = styled(motion.h2)`
   font-size: 48px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
   border-radius: 34px;
   border: 4px solid #fff;
   background: #000;
   @media screen and (min-width: 768px) {
     font-size: 64px;
-    margin: 0 auto;
   }
 `;
 
@@ -51,6 +57,10 @@ export const RoadMapList = styled(motion.ul)`
 export const RoadMapItem = styled(motion.li)`
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: "10px";
+  justify-content: start;
+  padding: 12px 8px;
+  font-size: 16px;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;

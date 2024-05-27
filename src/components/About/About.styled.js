@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 export const Headr = styled.header`
   padding: 0;
+  background-image: url("/bg.webp");
+  background-size: cover;
 `;
 
 export const ContainerHeroWrapper = styled.div`
@@ -42,8 +44,7 @@ export const AboutDescription = styled(motion.p)`
   text-align: justify;
 
   @media screen and (min-width: 768px) {
-    padding: 20px 40px;
-    max-width: 80%;
+    max-width: 85%;
     font-size: 24px;
   }
 `;

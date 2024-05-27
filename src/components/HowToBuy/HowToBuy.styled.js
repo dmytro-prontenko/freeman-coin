@@ -1,7 +1,31 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const HowToBySection = styled.section`
+export const HowToByWrapper = styled.section`
+  width: 100%;
+  padding: 64px 0 64px;
+  background-image: url("/how_to_buy_bg.webp");
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/m_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+`;
+
+export const HowToBySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

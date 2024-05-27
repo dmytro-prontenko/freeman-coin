@@ -1,13 +1,37 @@
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
-export const JoinSection = styled.section`
+export const JoinSectionWrapper = styled.section`
+  padding: 64px 0 64px;
+  width: 100%;
+  background-image: url("/bg_join.webp");
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/m_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+`;
+
+export const JoinSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding-bottom: 200px;
 
   @media screen and (min-width: 768px) {
     align-items: start;
@@ -89,4 +113,11 @@ export const ButtonText = styled.span`
   ${TGJoinButton}:hover & {
     transform: rotateX(180deg);
   }
+`;
+
+export const JoinImg = styled(motion.img)`
+  width: 95vw;
+  height: auto;
+  filter: blur(8px);
+  margin: 24px auto;
 `;

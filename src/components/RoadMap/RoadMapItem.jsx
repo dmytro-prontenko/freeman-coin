@@ -19,16 +19,6 @@ const RoadMapItem = ({ text, delay, imageSrc }) => {
       onAnimationComplete={() => setShowImage(true)}
     >
       {text}
-      {showImage && (
-        <motion.img
-          src={imageSrc}
-          alt="Roadmap"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          style={{ marginLeft: "10px", width: "50px", height: "50px" }}
-        />
-      )}
     </Styles.RoadMapItem>
   );
 };
