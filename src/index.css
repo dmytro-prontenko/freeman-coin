@@ -1,7 +1,7 @@
 @import "modern-normalize/modern-normalize.css";
 @font-face {
-  font-family: "LongToday";
-  src: url("/fonts/long_today/LongToday.otf") format("opentype");
+  font-family: "BLANGKONRemastered-Regular";
+  src: url("/fonts/BLANGKONRemastered-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,13 +14,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "LondrinaOutline";
-  src: url("/fonts/londrina/LondrinaOutline-Regular.otf")
-    format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'GhastlyPanic';
@@ -64,7 +58,7 @@
   /* Gradients */
 
   /* Font */
-  --font-family: LondrinaSolid, sans-serif;
+  --font-family: BLANGKONRemastered-Regular, sans-serif;
   --title-font-size: 24px;
   --title-font-weight: 500;
   --basic-font-size: 16px;

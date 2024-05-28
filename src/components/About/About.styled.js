@@ -102,6 +102,7 @@ export const FreemanButton = styled(motion.a)`
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 24px;
 
   &:hover {
     background-color: #fff;

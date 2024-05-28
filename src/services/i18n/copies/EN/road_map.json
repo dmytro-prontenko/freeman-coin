@@ -1,23 +1,63 @@
 {
   "road_map": {
-   "point_1": "We'll spread the word about us on all Telegram channels and Twitter. Let everyone know who the real master is here.",
-    "point_2": "Advertising in Telegram is our forte. We'll launch it to the max.",
+   "point_1":{
+    "1": "We'll spread the word about us on",
+    "2": " all Telegram channels and Twitter",
+    "3": ". Let everyone know who the real master is here."
+   },
+    "point_2":{
+     "1": "Advertising in",
+     "2": " Telegram ",
+     "3": "is our forte. We'll launch it to the max."
+    },
     "point_3": "We'll organize farming and cool contests. It'll be fun and profitable.",
     "point_4": "We'll gather the most loyal army of shillers and influencers. Let them work for us.",
-    "point_5": "We'll become a part of Ston.El, and let everyone be envious.",
-    "point_6": "We'll update GeckoTerminal for better tracking of our successes.",
-    "point_7": "We'll secure a spot on DexScreener and launch ads. Everything to the max.",
-    "point_8": "We'll scatter $50K on promotion, shilling, and trends. Let everyone see that we're serious.",
-    "point_9": "We'll include our token in Tonkeeper. Use it with ease.",
+    "point_5": {
+     "1": "We'll become a part of",
+     "2": " Ston.El",
+     "3": ", and let everyone be envious."
+    },
+    "point_6":{
+     "1": "We'll update",
+     "2": " GeckoTerminal ",
+     "3": "for better tracking of our successes."
+    },
+    "point_7":{
+     "1": "We'll secure a spot on",
+     "2": " DexScreener ",
+     "3": "and launch ads. Everything to the max."
+    },
+    "point_8":{
+     "1": "We'll scatter",
+     "2": " $50K ",
+     "3": "on promotion, shilling, and trends. Let everyone see that we're serious."
+    },
+    "point_9":{
+     "1": "We'll include our token in",
+     "2": " Tonkeeper",
+     "3": ". Use it with ease."
+    },
     "point_10": "We'll launch a staking round. Even more earning opportunities.",
-    "point_11": "We'll get listed on CoinGecko. Let us get noticed.",
+    "point_11":{
+     "1": "We'll get listed on",
+     "2": " CoinGecko",
+     "3": ". Let us get noticed."
+    },
     "point_12": "We'll establish useful connections with other projects. Mutually beneficial relationships are always welcome.",
     "point_13": "We'll invite a creative director to give our project a unique style.",
     "point_14": "We'll use the most unexpected advertising tactics. Everyone will talk about us.",
-    "point_15": "We'll become part of CoinMarketCap. Another milestone achieved.",
+    "point_15":{
+     "1": "We'll become part of",
+     "2": " CoinMarketCap",
+     "3": ". Another milestone achieved."
+    },
     "point_16": "We'll push our project to the top of all possible rankings. We are the leaders.",
     "point_17": "We're preparing something special for our dedicated fans. Details to come.",
     "point_18": "We're creating a premium chat for the select few. Only the best of the best.",
-    "point_19": "We'll update our Roadmap. Plans change, and we grow."
+    "point_19":{
+     "1": "We'll update our",
+     "2": " Roadmap",
+     "3": ". Plans change, and we grow."
+    }
   }
 }

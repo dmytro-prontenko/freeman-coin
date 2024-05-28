@@ -51,7 +51,7 @@ export const JoinSection = styled.div`
 
 export const JoinTitle = styled(motion.h2)`
   color: #fff;
-  padding: 20px;
+  padding: 20px 0 10px;
   font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 48px;
   text-transform: uppercase;
@@ -88,6 +88,7 @@ export const TGJoinContainer = styled.div`
 export const TGJoinButton = styled(motion.a)`
   display: flex;
   justify-content: center;
+
   align-items: center;
   height: 56px;
   width: 200px;
@@ -99,11 +100,11 @@ export const TGJoinButton = styled(motion.a)`
   perspective: 1000px;
   @media screen and (min-width: 768px) {
     height: 56px;
-    width: 250px;
+    width: 300px;
   }
   @media screen and (min-width: 1279px) {
     height: 72px;
-    width: 300px;
+    width: 350px;
   }
 `;
 
@@ -130,7 +131,7 @@ export const ButtonFront = styled(motion.div)`
 export const ButtonText = styled.span`
   font-family: "LongToday", sans-serif;
   color: #000;
-  font-size: 24px;
+  font-size: 14px;
   transform: rotateX(0deg);
   transition: transform 0.3s ease;
 

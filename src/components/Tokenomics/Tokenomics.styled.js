@@ -7,6 +7,19 @@ export const TokenomicsWrapper = styled.section`
   background-image: url("/tok_bg.webp");
   background-size: cover;
   position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/baks.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 50%;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -35,7 +48,7 @@ export const TokenomicsSection = styled.div`
 
 export const TokenomicsTitle = styled(motion.h2)`
   color: #fff;
-  padding: 20px;
+  padding: 20px 0 10px;
   font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 48px;
   text-transform: uppercase;
@@ -165,4 +178,5 @@ export const TakenomicsImg = styled(motion.img)`
   margin: 24px auto;
   border: 2px solid #fff;
   border-radius: 35px;
+  padding: 8px;
 `;

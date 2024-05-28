@@ -7,6 +7,20 @@ export const EarnWrapper = styled.section`
   background-image: url("/earn_bg.webp");
   background-size: cover;
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/bacs&moneta.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 60%;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -139,13 +153,13 @@ export const EarnItem = styled.li`
   align-items: center;
   justify-content: start;
   padding: 12px 8px;
-  font-size: 16px;
+  font-size: 20px;
 
   @media screen and (min-width: 768px) {
-    font-size: 24px;
+    font-size: 32px;
   }
   @media screen and (min-width: 1279px) {
-    font-size: 36px;
+    font-size: 48px;
   }
 `;
 
@@ -201,6 +215,7 @@ export const TokenomicsButton = styled(motion.a)`
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-left: 24px;
 
   &:hover {
     background-color: #fff;

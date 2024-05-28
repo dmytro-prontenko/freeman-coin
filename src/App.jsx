@@ -5,6 +5,7 @@ import HowToBuy from "./components/HowToBuy/HowToBuy.jsx";
 import TextScroller from "./components/TextScroller/TextScroller.jsx";
 import Earn from "./components/EARN/Earn.jsx";
 import Join from "./components/Join/Join.jsx";
+import ScrollButton from "./components/ScrollToTop/ScrollToTop.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Earn />
       <Join />
       <TextScroller text={"$FMAN"} />
+      <ScrollButton />
     </>
   );
 }

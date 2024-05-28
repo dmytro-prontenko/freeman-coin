@@ -4,8 +4,10 @@ import * as Styled from "../About/About.styled.js";
 import twitter from "/icon/twitter.png";
 import telegram from "/icon/telegram.png";
 import { TGCommunitySocialImg } from "./HowToBuy.styled.js";
+import { useTranslation } from "react-i18next";
 
 const HowToBuy = () => {
+  const { t } = useTranslation();
   return (
     <Stayles.HowToByWrapper>
       <Stayles.HowToBySection>
@@ -13,10 +15,7 @@ const HowToBuy = () => {
           How To Buy $FMAN
         </Stayles.HowToByTitle>
         <Stayles.HowToByDescription>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          {t("how_to_buy_desc")}
         </Stayles.HowToByDescription>
         <HowToBuyTimer />
         <Stayles.TGCommunityContainer>

@@ -38,7 +38,7 @@ export const RoadMapSection = styled.div`
 
 export const RoadMapTitle = styled(motion.h2)`
   color: #fff;
-  padding: 20px;
+  padding: 20px 0 10px;
   font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 48px;
   text-transform: uppercase;
@@ -61,29 +61,28 @@ export const RoadMapTitle = styled(motion.h2)`
 export const RoadMapSubTitle = styled(motion.h3)`
   color: #fff;
   font-family: "LongToday", sans-serif;
-  font-size: 36px;
+  font-size: 34px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  max-width: 85%;
-  padding: 54px;
+  max-width: 95%;
+  padding: 35px;
   @media screen and (min-width: 768px) {
     font-size: 48px;
   }
   @media screen and (min-width: 1279px) {
     font-size: 72px;
+    padding: 54px;
   }
 `;
 
-export const RoadMapList = styled(motion.ul)`
-  margin: 0 auto;
+export const RoadMapList = styled(motion.ol)`
+  margin-left: 32px;
   padding-left: 32px;
   max-width: 90%;
+  list-style: decimal;
 `;
 
 export const RoadMapItem = styled(motion.li)`
-  display: flex;
-  align-items: center;
-  justify-content: start;
   padding: 12px 8px;
   font-size: 16px;
 
@@ -95,13 +94,14 @@ export const RoadMapItem = styled(motion.li)`
   }
 `;
 
-export const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 35%),
-    linear-gradient(360deg, #0f0f0f 0%, rgba(15, 15, 15, 0) 35%);
-  z-index: 1;
+export const Yellow = styled.span`
+  font-weight: bold;
+  color: var(--basic-yellow);
+  font-size: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 1279px) {
+    font-size: 48px;
+  }
 `;

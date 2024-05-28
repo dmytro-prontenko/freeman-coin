@@ -52,7 +52,7 @@ const Tokenomics = () => {
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 2, ease: "easeOut" }}
         />
-        <Styled.TokenomicsSubTitle>Marketing Wallet</Styled.TokenomicsSubTitle>
+        <Styled.TokenomicsSubTitle>{t("title_tok")}</Styled.TokenomicsSubTitle>
         <Styled.ToknomicsDescription>
           {t("tok_desc1")}
         </Styled.ToknomicsDescription>

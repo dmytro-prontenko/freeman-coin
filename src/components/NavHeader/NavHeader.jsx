@@ -1,9 +1,11 @@
 import * as Styled from "./NavHeader.styled.js";
 import { useEffect, useState } from "react";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const NavHeader = () => {
   const [lang, setLang] = useState(i18next.language);
+  const { t } = useTranslation();
 
   useEffect(() => {
     void i18next.changeLanguage(lang);
@@ -11,26 +13,31 @@ const NavHeader = () => {
 
   const changeLanguage = () => {
     setLang(lang === "GB" ? "RU" : "GB");
-    console.log(lang);
   };
   return (
-    <Styled.HeaderHiWrapper>
+    <Styled.HeaderHiWrapper id={"header"}>
       <Styled.NavHeader
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
         exit={{ y: 1000 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <Styled.NavHeaderLink href={"#about"}>About</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#about"}>
+          {t("about")}
+        </Styled.NavHeaderLink>
         <Styled.NavHeaderLink href={"#tokenomics"}>
-          Tokenomics
+          {t("tokenomics")}
         </Styled.NavHeaderLink>
-        <Styled.NavHeaderLink href={"#road_map"}>Roadmap</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#road_map"}>
+          {t("roadmap")}
+        </Styled.NavHeaderLink>
         <Styled.NavHeaderLink href={"#how_to_buy"}>
-          How to buy
+          {t("how_to_buy")}
         </Styled.NavHeaderLink>
-        <Styled.NavHeaderLink href={"#earn"}>Earn</Styled.NavHeaderLink>
-        <Styled.NavHeaderLink href={"#join"}>Socials</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#earn"}>{t("earn")}</Styled.NavHeaderLink>
+        <Styled.NavHeaderLink href={"#join"}>
+          {t("socials")}
+        </Styled.NavHeaderLink>
       </Styled.NavHeader>
       <Styled.HeaderLangWrapper>
         <Styled.FreemanLanguageButton

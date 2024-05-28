@@ -19,6 +19,7 @@ export const HowToByWrapper = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     pointer-events: none;
+    opacity: 50%;
   }
   &::before {
     content: "";
@@ -51,7 +52,7 @@ export const HowToBySection = styled.div`
 
 export const HowToByTitle = styled(motion.h2)`
   color: #fff;
-  padding: 20px;
+  padding: 20px 0 10px;
   font-family: "DarkGraffiti-Regular", sans-serif;
   font-size: 48px;
   text-transform: uppercase;
@@ -172,11 +173,11 @@ export const TGCommunityButton = styled(motion.a)`
   perspective: 1000px;
   @media screen and (min-width: 768px) {
     height: 56px;
-    width: 250px;
+    width: 300px;
   }
   @media screen and (min-width: 1279px) {
     height: 72px;
-    width: 300px;
+    width: 350px;
   }
 `;
 
@@ -204,7 +205,7 @@ export const ButtonFront = styled(motion.div)`
 export const ButtonText = styled.span`
   font-family: "LongToday", sans-serif;
   color: #000;
-  font-size: 22px;
+  font-size: 14px;
   transform: rotateX(0deg);
   transition: transform 0.3s ease;
 
